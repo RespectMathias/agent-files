@@ -13,17 +13,14 @@ Cline,
 Nvidia Nim,
 Openrouter,
 Antigravity cli (low usage),
-grok build (for a limited time),
-cursor (auto is free which is composer, currently grok 4.5 is free),
+cursor (auto is free which is composer)
 codex (Unsure, I believe older models are currently free, don't quote me though)
 
 Online chats are nearly all free, perhaps something along the lines of <https://github.com/NiteshSingh17/apibeam> could be a solution, but may risk breaking TOS, so you know, don't use services that require a login, then perhaps using some free VPNs, since you will be tracked using these chats anyway.
-<https://arena.ai/> - added this here since I won't be able to remember it. Simplest way to do the above is just look at a list of frontier models and go to their chat website.
 
 Best cheap AI:
 ChatGPT, gives the most usage of all providers
 Opencode Go (ClinePass seems to be a new option in this category)
-Cursor with Grok 4.5 and Composer 2.5
 
 ## Current thoughts
 
@@ -41,7 +38,7 @@ Plan mode -> Grill me -> Implement TDD -> mutation test -> adversarial review
 
 Note: When I need a persistent plan openspec is my go to i.e. if i need the ability to hand off to a different agent etc.
 
-Apparently you are supposed to automate things with workflows, but it is incredibly hard to know what is going on with grifters out there and nonsense AI generated videos, so so far I am keeping it simple, I dunno if theo t3ddog is using n8n or something. Apparently he is using Claude Code with a proxy, but since there is no clear guide I have yet to check this out.
+Apparently you are supposed to automate things with workflows, but it is incredibly hard to know what is going on with grifters out there and nonsense AI generated videos, so so far I am keeping it simple, I dunno if theo t3ddog is using n8n or something.
 
 Even though it is hated due to its vibe coded nature it has some of my opinions: <https://docs.github.com/en/copilot/tutorials/optimize-ai-usage>
 
@@ -49,13 +46,11 @@ Even though it is hated due to its vibe coded nature it has some of my opinions:
 
 Must:
 I intend to port ddgrs to npm so I can make it an npx skill and use that instead of exa, since skills are more portable than plugins or MCP.
-Update system prompt to make AI chain commands instead of adding useless text between each command.
 Update TDD skill to decrease mutations before mutation testing, since mutation testing is time consuming and the agent needs to do it again, meaning more expensive than a proper instruction flow. And No mutations is not a good instruction as an LLM doesn't understand what a mutation is or what a stale test is.
 
-Want to see if I can make a fork of pi-blackwhole in v2 of opencode since v1 doesn't have the proper APIs.
+~~Want to see if I can make a fork of pi-blackwhole in v2 of opencode since v1 doesn't have the proper APIs.~~ - OpenCode v2 has a "Good enough" compaction system, not great, but not worth all the work for minimal improvement
 
-Want to make my own coding agent based on rust ports of opencode and pi.
+Make TUI for dsh using dsh-tui and OpenCode rust port
+Port blackwhole to dsh
 
 Need to switch to Obsidian and migrate my docs, migrate to brave origin and uninstall edge. Install harper too.
-
-Note: This is just a mess of my thoughts so far
