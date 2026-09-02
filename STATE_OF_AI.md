@@ -61,9 +61,11 @@ Skills to check out:
 Pocock
 Cursor - PStack and review skills
 Claude
-Superpowers
+
+eligibility test: "What can this do that one short prompt doesn't already give me?" and "Is it better than the alternatives?"
+Example: grill-me-with-docs fails on the alternative: grill-me + "save plan to foo.md"
 
 .Agents and AGENTS.md is what I am currently using, anything in other directories are things I might copy over in specific cases and some others I likely wont.
 New AGENTS.md is modified 02-09-2026: <https://raw.githubusercontent.com/DietrichGebert/ponytail/refs/heads/main/AGENTS.md>
 
-Currently using modified Pocock grill-me skill, it still queries the user obvious questions, need to fix. The rest of the pocock skills don't appeal too much to me, but need to find out.
+Currently using modified Pocock grill-me skill, it still queries the user obvious questions, need to fix.
