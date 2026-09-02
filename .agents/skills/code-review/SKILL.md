@@ -5,7 +5,7 @@ description: Review code changes for correctness, regressions, security, and oth
 
 # Review
 
-Review the requested changes. Do not modify code unless the user explicitly asks for fixes.
+Review the requested changes. Keep review read-only: do not modify code, the working tree, index, HEAD, or branch state unless the user explicitly asks for fixes.
 
 ## 1. Determine scope
 
@@ -13,7 +13,7 @@ Use the target the user gave.
 
 If no target was given, review current uncommitted changes.
 
-Read repository instructions and the relevant diff before dispatching the review. Include enough surrounding code to understand the change, not only isolated diff hunks.
+Read repository instructions and the relevant diff before dispatching the review. Include enough surrounding code to understand the change, not only isolated diff hunks. If requirements, a plan, issue, or specification define the change, verify the implementation against them and flag missing, extra, or misunderstood behavior.
 
 ## 2. Independent review
 
@@ -23,15 +23,15 @@ Give it the review target and instruct it to act as a skeptical reviewer who did
 
 It must:
 
-* Read the complete diff.
-* Read surrounding implementation where needed.
-* Trace callers, callees, types, invariants, and related tests when they affect changed behavior.
-* Check deleted or replaced logic and determine where its previous guarantees are now enforced.
-* Focus on correctness, regressions, security, data loss, concurrency, API contracts, error handling, meaningful performance problems, and structural regressions.
-* Check test coverage when missing coverage could let a concrete regression escape.
-* Run existing focused tests, type checks, linters, or builds when useful and reasonably scoped.
-* Report only problems introduced or exposed by the reviewed change.
-* Prefer root causes over symptoms.
+- Read the complete diff.
+- Read surrounding implementation where needed.
+- Trace callers, callees, types, invariants, and related tests when they affect changed behavior.
+- Check deleted or replaced logic and determine where its previous guarantees are now enforced.
+- Focus on correctness, regressions, security, data loss, concurrency, API contracts, error handling, meaningful performance problems, and structural regressions.
+- Check test coverage when missing coverage could let a concrete regression escape.
+- Run existing focused tests, type checks, linters, or builds when useful and reasonably scoped.
+- Report only problems introduced or exposed by the reviewed change.
+- Prefer root causes over symptoms.
 
 Also review the implementation aggressively for unnecessary complexity and structural regressions.
 
@@ -43,23 +43,23 @@ Structural findings still need a concrete cost: increased coupling, duplicated b
 
 For every finding require:
 
-* severity
-* file and line
-* concrete problem
-* failure scenario or structural consequence: specific input, state, timing, condition, or code evolution that exposes the problem and its concrete effect
-* evidence from code or a deterministic check
-* smallest reasonable fix
-* test or check that would catch the regression when applicable
+- severity
+- file and line
+- concrete problem
+- failure scenario or structural consequence: specific input, state, timing, condition, or concrete property of the changed code that causes the problem and its effect
+- evidence from code or a deterministic check
+- smallest reasonable fix
+- test or check that would catch the regression when applicable
 
 Do not report:
 
-* formatter or style issues
-* subjective refactors or alternative designs with no concrete structural cost
-* generic best-practice advice
-* missing comments or documentation without a concrete consequence
-* pre-existing problems unrelated to the change
-* descriptions or praise of what the change already does
-* speculative suggestions without a concrete failure scenario or cost
+- formatter or style issues
+- subjective refactors or alternative designs with no concrete structural cost
+- generic best-practice advice
+- missing comments or documentation without a concrete consequence
+- pre-existing problems unrelated to the change
+- descriptions or praise of what the change already does
+- speculative suggestions without a concrete failure scenario or cost
 
 Silence is better than noise. A clean review may contain no findings.
 
@@ -79,11 +79,11 @@ No concrete failure or evidence.
 
 > **[Medium]** **`src/posts.ts:42`** **- Loads each author with a separate query**
 >
-> * Problem: The new loop fetches each post's author individually.
-> * Failure scenario: Listing 100 posts performs 101 database queries instead of a bounded query count, increasing request latency with result size.
-> * Evidence: `getAuthor(post.authorId)` executes inside the loop and performs a database query on every call.
-> * Suggested fix: Load the required authors in one query or use the repository's existing eager-loading path.
-> * Regression check: Query-count test for a multi-post response.
+> - Problem: The new loop fetches each post's author individually.
+> - Failure scenario: Listing 100 posts performs 101 database queries instead of a bounded query count, increasing request latency with result size.
+> - Evidence: `getAuthor(post.authorId)` executes inside the loop and performs a database query on every call.
+> - Suggested fix: Load the required authors in one query or use the repository's existing eager-loading path.
+> - Regression check: Query-count test for a multi-post response.
 
 Do not manufacture a finding merely to produce feedback.
 
@@ -125,9 +125,9 @@ For every candidate:
 4. Run a focused deterministic check when that can settle the question.
 5. Return one verdict:
 
-   * `confirmed`
-   * `rejected`
-   * `needs human review`
+   - `confirmed`
+   - `rejected`
+   - `needs human review`
 
 Reject only with concrete counter-evidence, such as a guard that covers the stated trigger, an impossible state proven by the code, a misread API contract, evidence that the structural consequence does not exist, or evidence that the issue is outside the reviewed change.
 
@@ -145,11 +145,11 @@ For each include:
 
 **[Severity]** **`file:line`** **- short title**
 
-* Problem
-* Failure scenario or structural consequence
-* Evidence
-* Suggested fix
-* Regression check
+- Problem
+- Failure scenario or structural consequence
+- Evidence
+- Suggested fix
+- Regression check, when applicable
 
 Put unresolved findings under `Needs human review`.
 
