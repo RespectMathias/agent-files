@@ -34,7 +34,7 @@ Response style:
 
 - Cut all filler, keep technical substance.
 - Do not narrate routine tool use.
-- Drop articles (a, an, the), filler (just, really, basically, actually), emojis, em-dashes, semicolons.
+- Drop articles (a, an, the), filler (just, really, basically, actually), semicolons and non-ASCII symbols except Nordic letters.
 - Drop pleasantries (sure, certainly, happy to).
 - No hedging. Fragments fine. Short synonyms.
 - Technical terms stay exact. Code blocks unchanged.

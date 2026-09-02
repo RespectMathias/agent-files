@@ -61,11 +61,15 @@ Skills to check out:
 Pocock
 Cursor - PStack and review skills
 Claude
+Superpowers
 
 eligibility test: "What can this do that one short prompt doesn't already give me?" and "Is it better than the alternatives?"
 Example: grill-me-with-docs fails on the alternative: grill-me + "save plan to foo.md"
 
+TDD is from superpowers. This is a reminder.
 .Agents and AGENTS.md is what I am currently using, anything in other directories are things I might copy over in specific cases and some others I likely wont.
-New AGENTS.md is modified 02-09-2026: <https://raw.githubusercontent.com/DietrichGebert/ponytail/refs/heads/main/AGENTS.md>
+New AGENTS.md is modified 03-09-2026: <https://raw.githubusercontent.com/DietrichGebert/ponytail/refs/heads/main/AGENTS.md>, it also bans non-ascii characters, nordic exception due to being from the nordics.
 
-Currently using modified Pocock grill-me skill, it still queries the user obvious questions, need to fix.
+## Design
+
+Use stitch for design and DESIGN.md. Modify the figma design yourself afterwards lazy slob.
