@@ -54,3 +54,16 @@ Make TUI for dsh using dsh-tui and OpenCode rust port
 Port blackwhole to dsh
 
 Need to switch to Obsidian and migrate my docs, migrate to brave origin and uninstall edge. Install harper too.
+
+## Skills
+
+Skills to check out:
+Pocock
+Cursor - PStack and review skills
+Claude
+Superpowers
+
+.Agents and AGENTS.md is what I am currently using, anything in other directories are things I might copy over in specific cases and some others I likely wont.
+New AGENTS.md is modified 02-09-2026: <https://raw.githubusercontent.com/DietrichGebert/ponytail/refs/heads/main/AGENTS.md>
+
+Currently using modified Pocock grill-me skill, it still queries the user obvious questions, need to fix. The rest of the pocock skills don't appeal too much to me, but need to find out.

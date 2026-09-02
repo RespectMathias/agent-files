@@ -1,0 +1,25 @@
+{
+  "lastChangelogVersion": "0.83.0",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": false,
+  "theme": "dark",
+  "defaultTools": [
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "grep",
+    "find",
+    "ls"
+  ],
+  "packages": [
+    "npm:pi-rtk-optimizer",
+    "npm:pi-copy-all",
+    "git:github.com/RespectMathias/pi-undo",
+    "git:github.com/RespectMathias/pi-octui",
+    "npm:pi-blackhole",
+    "npm:@tintinweb/pi-subagents"
+  ]
+}
