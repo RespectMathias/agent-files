@@ -46,7 +46,6 @@ Even though it is hated due to its vibe coded nature it has some of my opinions:
 
 Must:
 I intend to port ddgrs to npm so I can make it an npx skill and use that instead of exa, since skills are more portable than plugins or MCP.
-Update TDD skill to decrease mutations before mutation testing, since mutation testing is time consuming and the agent needs to do it again, meaning more expensive than a proper instruction flow. And No mutations is not a good instruction as an LLM doesn't understand what a mutation is or what a stale test is.
 
 ~~Want to see if I can make a fork of pi-blackwhole in v2 of opencode since v1 doesn't have the proper APIs.~~ - OpenCode v2 has a "Good enough" compaction system, not great, but not worth all the work for minimal improvement
 
